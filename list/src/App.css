@@ -44,5 +44,10 @@
   align-self: flex-start;
   position: relative;
   left: 5%;
+}
 
+@media (max-width:745px) {
+  .parent {
+    width: 90%;
+  }
 }

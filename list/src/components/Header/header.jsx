@@ -3,13 +3,12 @@ import { React, useState, useEffect } from "react";
 import "./header.css";
 
 function Header() {
-
-  // State 
+  // State
   const [currentDate, setCurrentDate] = useState(new Date());
 
-  // Getting Current Date 
+  // Getting Current Date
   useEffect(() => {
-    const interval = setInterval(() => {
+    setInterval(() => {
       setCurrentDate(new Date());
     }, 1000);
   }, []);
@@ -19,9 +18,7 @@ function Header() {
   return (
     <div className="headerContainer">
       <h1>Simple React List</h1>
-      <div>
-        <p>Date: {formattedDate}</p>
-      </div>
+      <p>Date: {formattedDate}</p>
       <div>
         <input type="text" placeholder="Name" />
         <input type="text" placeholder="Receipt Number" />
